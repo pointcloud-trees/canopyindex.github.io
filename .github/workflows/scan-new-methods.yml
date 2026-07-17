@@ -1,0 +1,52 @@
+name: Scan for new methods
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # every Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Scan GitHub for candidate methods
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/scan-new-methods.mjs
+
+      - name: Open PR with candidates
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: update new-method candidate scan"
+          title: "New LiDAR tree-structure method candidates found"
+          body: |
+            Automated weekly scan of GitHub for repositories matching LiDAR
+            tree-structure keywords that aren't yet in the catalog
+            (`src/lib/methods.ts`).
+
+            **This data is unverified.** GitHub search results routinely include
+            forks, unrelated repos, and metadata (license, stars, description)
+            that doesn't hold up under a closer look. Before adding any candidate
+            below to `methods.ts`:
+
+            - Confirm the repo is real, maintained, and matches its description
+            - Check the license in the repo itself, not just the search result
+            - Find the correct paper via Crossref or the repo's README — never guess a DOI
+            - Verify author names against the paper/package metadata — never invent one
+
+            See `NEW_METHOD_CANDIDATES.md` in this PR for the full candidate list.
+          branch: automated/new-method-candidates
+          add-paths: NEW_METHOD_CANDIDATES.md
+          delete-branch: true
