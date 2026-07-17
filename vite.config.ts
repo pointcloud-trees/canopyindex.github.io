@@ -40,7 +40,15 @@ export default defineConfig(async (env) => {
 
   if (command === "build") {
     const { nitro } = await import("nitro/vite");
-    internalPlugins.push(nitro({ defaultPreset: "cloudflare-module" }));
+    internalPlugins.push(
+      nitro({
+        defaultPreset: "cloudflare-module",
+        // Pin the Worker name explicitly instead of relying on the name nitro
+        // derives from the git remote - keeps deploys targeting the same
+        // Worker regardless of where the repo is hosted or renamed to.
+        cloudflare: { wrangler: { name: "canopyindex" } },
+      }),
+    );
   }
 
   internalPlugins.push(viteReact());

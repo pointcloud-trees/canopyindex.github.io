@@ -81,7 +81,25 @@ becomes a real catalog entry.
 ## CI
 
 `.github/workflows/ci.yml` runs on every push/PR to `main`: lint, typecheck
-(`tsc --noEmit`), and a production build.
+(`tsc --noEmit`), and a production build. It does not deploy anything - a
+green run only means the code builds cleanly.
+
+## Deployment
+
+`.github/workflows/deploy.yml` builds and deploys to Cloudflare Workers on
+every push to `main` (matches the app's `cloudflare-module` Nitro preset -
+this is a real SSR app, not a static site, so GitHub Pages can't host it).
+The Worker name is pinned to `canopyindex` in `vite.config.ts`.
+
+This requires two repository secrets that aren't set up yet:
+
+- `CLOUDFLARE_API_TOKEN` - create one at Cloudflare dashboard -> My Profile ->
+  API Tokens, using the "Edit Cloudflare Workers" template
+- `CLOUDFLARE_ACCOUNT_ID` - found in the Cloudflare dashboard sidebar on any
+  Workers/domain overview page
+
+Add both under repo Settings -> Secrets and variables -> Actions -> New
+repository secret. Until they're set, the deploy step will fail.
 
 ## License
 
