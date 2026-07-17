@@ -29,9 +29,12 @@ jobs:
         run: npm run build
 
       - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: .output/server
-          command: deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        # nitro generates both .output/server/wrangler.json (the real config) and
+        # .wrangler/deploy/config.json (a redirect pointer for this command). Running
+        # plain `wrangler deploy` from .output/server directly finds both and refuses
+        # to guess which one to use - `nitro deploy --prebuilt` resolves the redirect
+        # correctly and must be run from the repo root, not from .output/server.
+        run: npx nitro deploy --prebuilt
