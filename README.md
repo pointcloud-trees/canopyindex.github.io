@@ -91,19 +91,17 @@ every push to `main` (matches the app's `cloudflare-module` Nitro preset -
 this is a real SSR app, not a static site, so GitHub Pages can't host it).
 The Worker name is pinned to `canopyindex` in `vite.config.ts`.
 
-This requires two repository secrets that aren't set up yet:
+The deploy uses two repository secrets (repo Settings -> Secrets and
+variables -> Actions):
 
-- `CLOUDFLARE_API_TOKEN` - create one at Cloudflare dashboard -> My Profile ->
-  API Tokens, using the "Edit Cloudflare Workers" template
-- `CLOUDFLARE_ACCOUNT_ID` - found in the Cloudflare dashboard sidebar on any
+- `CLOUDFLARE_API_TOKEN` - an API token created from the "Edit Cloudflare
+  Workers" template (Cloudflare dashboard -> My Profile -> API Tokens)
+- `CLOUDFLARE_ACCOUNT_ID` - shown in the Cloudflare dashboard sidebar on any
   Workers/domain overview page
-
-Add both under repo Settings -> Secrets and variables -> Actions -> New
-repository secret. Until they're set, the deploy step will fail.
 
 ## License
 
-No license has been chosen for this repository yet.
+Released under the [MIT License](LICENSE).
 
 ## Author
 
