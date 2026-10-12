@@ -1,4 +1,4 @@
-# New method candidates (scan: 2026-10-11)
+# New method candidates (scan: 2026-10-12)
 
 Automated weekly scan of GitHub for repos matching LiDAR tree-structure keywords
 that aren't currently in `src/lib/methods.ts`.
@@ -14,7 +14,7 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 
 ## [SmartForest-no/ForestFormer3D](https://github.com/SmartForest-no/ForestFormer3D)
 
-- **Stars:** 125 · **Language:** Python · **License:** NOASSERTION · **Updated:** 2026-10-10
+- **Stars:** 126 · **Language:** Python · **License:** NOASSERTION · **Updated:** 2026-10-12
 - **Matched query:** `forest point cloud segmentation`
 - **Description:** Official implementation of the ICCV 2025 paper:  "ForestFormer3D: A Unified Framework for End-to-End Segmentation of Forest LiDAR 3D Point Clouds"
 
