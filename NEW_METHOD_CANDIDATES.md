@@ -1,4 +1,4 @@
-# New method candidates (scan: 2026-10-11)
+# New method candidates (scan: 2026-11-09)
 
 Automated weekly scan of GitHub for repos matching LiDAR tree-structure keywords
 that aren't currently in `src/lib/methods.ts`.
@@ -14,13 +14,13 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 
 ## [SmartForest-no/ForestFormer3D](https://github.com/SmartForest-no/ForestFormer3D)
 
-- **Stars:** 125 · **Language:** Python · **License:** NOASSERTION · **Updated:** 2026-10-10
+- **Stars:** 133 · **Language:** Python · **License:** NOASSERTION · **Updated:** 2026-11-08
 - **Matched query:** `forest point cloud segmentation`
 - **Description:** Official implementation of the ICCV 2025 paper:  "ForestFormer3D: A Unified Framework for End-to-End Segmentation of Forest LiDAR 3D Point Clouds"
 
 ## [VUKOZ-OEL/3d-forest](https://github.com/VUKOZ-OEL/3d-forest)
 
-- **Stars:** 96 · **Language:** C++ · **License:** GPL-3.0 · **Updated:** 2026-09-25
+- **Stars:** 98 · **Language:** C++ · **License:** GPL-3.0 · **Updated:** 2026-10-26
 - **Matched query:** `point cloud tree segmentation`
 - **Description:** Visualization, processing and analysis of Lidar point clouds, mainly focused on forest environment. New version of 3D Forest. Process files with terabytes of data. Edit new point attributes. Simple addition of new features by plugins.
 
@@ -32,7 +32,7 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 
 ## [sining1989/PointCloudTools](https://github.com/sining1989/PointCloudTools)
 
-- **Stars:** 84 · **Language:** C++ · **License:** none · **Updated:** 2026-06-23
+- **Stars:** 85 · **Language:** C++ · **License:** none · **Updated:** 2026-11-02
 - **Matched query:** `point cloud tree segmentation`
 - **Description:** PointCloudTools是一款在Windows平台基于VS2017、Qt5.9.5、PCL1.8.1、VTK8.0.0源码编译开发的专门处理点云（.pcd、.ply、.obj等格式）文件的可视化工具。 该工具点云可视化使用的是vtk8.0.0编译生成的QVTKWidget窗口控件，使用PCL可以对点云进行滤波(filter)、特征提取(features)、关键点(keypoint)、 分割(segmentation)、识别(recognition)、可视化(visualization)等操作，可以对所有点云进行WGS84到平面坐标系转换，也包含将经纬度坐标转为UTM坐标的方法。 下载64位PCL1.8.164位下载路径：https://github.com/PointCloudLibrary/pcl/releases或http://unanancyowen.com/en/pcl181 PCL1.8.1对应的VTK版本为8.0.0，下载地址：https://gitlab.kitware.com/vtk/vtk/tree/v8.0.0
 
@@ -44,9 +44,15 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 
 ## [GuangpengFan/AdQSM](https://github.com/GuangpengFan/AdQSM)
 
-- **Stars:** 68 · **Language:** GLSL · **License:** none · **Updated:** 2026-09-30
+- **Stars:** 67 · **Language:** GLSL · **License:** none · **Updated:** 2026-10-26
 - **Matched query:** `lidar tree structure`
 - **Description:** AdQSM is a new tree quantitative structure model (QSM) that can reconstruct the 3D branch geometry of individual tree from Terrestrial Laser Scanning (TLS) point clouds. Many attributes of the trunk or branch can also be quantitatively calculated (as shown in the table below). For example, tree volume (trunk and branch), DBH and tree height parameters can be extracted directly. It allows point clouds collected by different sensors to serve as input point clouds. In addition to TLS, UAV LiDAR, mobile LiDAR, SLAM and even photogrammetry are also included under the premise of appropriate point cloud density.
+
+## [r-lidar/arbor](https://github.com/r-lidar/arbor)
+
+- **Stars:** 64 · **Language:** C++ · **License:** GPL-3.0 · **Updated:** 2026-11-05
+- **Matched query:** `forest point cloud segmentation`
+- **Description:** 3D Forest modelisation in MLS point cloud
 
 ## [juanb09111/FinnForest](https://github.com/juanb09111/FinnForest)
 
@@ -54,47 +60,41 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 - **Matched query:** `forest point cloud segmentation`
 - **Description:**  This paper introduces a forest dataset called FinnWoodlands, which consists of RGB stereo images, point clouds, and sparse depth maps, as well as ground truth manual annotations for semantic, instance, and panoptic segmentation
 
-## [r-lidar/arbor](https://github.com/r-lidar/arbor)
-
-- **Stars:** 61 · **Language:** C++ · **License:** GPL-3.0 · **Updated:** 2026-10-07
-- **Matched query:** `forest point cloud segmentation`
-- **Description:** 3D Forest modelisation in MLS point cloud
-
 ## [uc-vision/smart-tree](https://github.com/uc-vision/smart-tree)
 
-- **Stars:** 53 · **Language:** Python · **License:** MIT · **Updated:** 2026-09-09
+- **Stars:** 55 · **Language:** Python · **License:** MIT · **Updated:** 2026-10-24
 - **Matched query:** `tree skeleton point cloud`
 - **Description:** Neural Medial Axis Approximation of Point Clouds for 3D Tree Skeletonization
 
 ## [umr-amap/aRchi](https://github.com/umr-amap/aRchi)
 
-- **Stars:** 40 · **Language:** R · **License:** none · **Updated:** 2026-06-01
+- **Stars:** 41 · **Language:** R · **License:** none · **Updated:** 2026-10-28
 - **Matched query:** `terrestrial laser scanning tree`
 - **Description:** R package aRchi. Tree architecture from terrestrial laser scanning (TLS) data
 
 ## [ai4trees/pointtree](https://github.com/ai4trees/pointtree)
 
-- **Stars:** 36 · **Language:** Python · **License:** MIT · **Updated:** 2026-09-26
+- **Stars:** 36 · **Language:** Python · **License:** MIT · **Updated:** 2026-10-15
 - **Matched query:** `point cloud tree segmentation`
 - **Description:** A Python Package for Tree Instance Segmentation in 3D Point Clouds.
 
 ## [UQ-EORC/Segfix](https://github.com/UQ-EORC/Segfix)
 
-- **Stars:** 32 · **Language:** Python · **License:** GPL-3.0 · **Updated:** 2026-10-10
+- **Stars:** 33 · **Language:** Python · **License:** GPL-3.0 · **Updated:** 2026-11-09
 - **Matched query:** `point cloud tree segmentation`
 - **Description:** A GUI tool to fix the instance segmentation of tree point clouds.
+
+## [thanhhff/ForestMamba](https://github.com/thanhhff/ForestMamba)
+
+- **Stars:** 31 · **Language:** Python · **License:** NOASSERTION · **Updated:** 2026-10-29
+- **Matched query:** `forest point cloud segmentation`
+- **Description:** Sparse Mamba with Geometry-guided Queries for 3D Forest Point Cloud Segmentation (BMVC 2026)
 
 ## [limingado/NSC](https://github.com/limingado/NSC)
 
 - **Stars:** 29 · **Language:** Python · **License:** none · **Updated:** 2025-10-04
 - **Matched query:** `point cloud tree segmentation`
 - **Description:** The code is an implementation of the Nystrӧm-based spectral clustering with the K-nearest neighbour-based sampling (KNNS) method (Pang et al. 2021). It is aimed for individual tree segmentation using airborne LiDAR point cloud data.   When using the code, please cite as:  Yong Pang, Weiwei Wang, Liming Du, Zhongjun Zhang, Xiaojun Liang, Yongning Li, Zuyuan Wang (2021) Nystrӧm-based spectral clustering using airborne LiDAR point cloud data for individual tree segmentation, International Journal of Digital Earth  Code files:  ‘segmentation.py’: the main function, including deriving local maximum from Canopy Height Model (CHM); ‘VNSC.py’: other functions for the algorithm, including mean-shift voxelization, similarity graph construction, KNNS sampling, eigendecomposition, k-means clustering, as well as the computation and writing of individual tree parameters.  Key parameters: When using the code, users can adjust the values of local maximum window, gap (the upper limit of the number of final clusters), knn (the number of k-nearest neighbours in the similarity graph) and quantile in meanshift method based specific data characteristics. Currently, the value of local maximum window is 3m ×3m, the value of gap is defined as the 1.5 times of the local maximum detected from CHM. Parameter knn can be defined as a constant value (40 in the code) based on the data characteristics, or be determined through the relationship between it and the number of voxels. The default setting of quantile in meanshift method is the average density of point clouds. More details can be found in Pang et al. (2021).  Test data: ‘ALS_pointclouds.txt’: point cloud data; ‘ALS_CHM.tif’: CHM of the point cloud data; ‘Reference_tree.csv’: field measurements for algorithm validation. The position was measured using differential GNSS. The tree height of each tree in this file is obtained by regression estimation.  Outputs: ‘Data_seg.csv’: coordinate of each point (x, y, z) as well as its cluster label after segmentation; ‘Parameter.csv’: individual tree parameters (TreeID, Position_X, Position_Y, Crown, Height) based on the calculation described in Pang et al. (2021).
-
-## [thanhhff/ForestMamba](https://github.com/thanhhff/ForestMamba)
-
-- **Stars:** 29 · **Language:** Python · **License:** NOASSERTION · **Updated:** 2026-10-09
-- **Matched query:** `forest point cloud segmentation`
-- **Description:** Sparse Mamba with Geometry-guided Queries for 3D Forest Point Cloud Segmentation (BMVC 2026)
 
 ## [JulFrey/CspStandSegmentation](https://github.com/JulFrey/CspStandSegmentation)
 
@@ -110,9 +110,15 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 
 ## [truebelief/cc-treeiso-plugin](https://github.com/truebelief/cc-treeiso-plugin)
 
-- **Stars:** 18 · **Language:** C++ · **License:** GPL-3.0 · **Updated:** 2026-09-28
+- **Stars:** 19 · **Language:** C++ · **License:** GPL-3.0 · **Updated:** 2026-10-20
 - **Matched query:** `terrestrial laser scanning tree`
 - **Description:** Individual-tree isolation (treeiso) from terrestrial laser scanning
+
+## [Elephant-C/tree-crown-based-assessment](https://github.com/Elephant-C/tree-crown-based-assessment)
+
+- **Stars:** 18 · **Language:** Python · **License:** MIT · **Updated:** 2026-10-26
+- **Matched query:** `tree crown segmentation lidar`
+- **Description:** Tree crown polygon-based assessment for airborne LiDAR data individual tree segmentation inter-comparison
 
 ## [lostagex/skeleton_extraction](https://github.com/lostagex/skeleton_extraction)
 
@@ -126,17 +132,17 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 - **Matched query:** `tree skeleton point cloud`
 - **Description:** An algorithm to extract skeletons from discrete point clouds of tree branches collected by terrestrial laser scanners
 
-## [Elephant-C/tree-crown-based-assessment](https://github.com/Elephant-C/tree-crown-based-assessment)
-
-- **Stars:** 17 · **Language:** Python · **License:** MIT · **Updated:** 2026-05-11
-- **Matched query:** `tree crown segmentation lidar`
-- **Description:** Tree crown polygon-based assessment for airborne LiDAR data individual tree segmentation inter-comparison
-
 ## [anditockner/treeX](https://github.com/anditockner/treeX)
 
-- **Stars:** 15 · **Language:** R · **License:** GPL-3.0 · **Updated:** 2026-10-06
+- **Stars:** 15 · **Language:** R · **License:** GPL-3.0 · **Updated:** 2026-10-27
 - **Matched query:** `individual tree detection lidar`
 - **Description:** Package for individual tree detection and tree segmentation from ground-based LiDAR data
+
+## [thanhhff/SelectAnyTree](https://github.com/thanhhff/SelectAnyTree)
+
+- **Stars:** 15 · **Language:** unknown · **License:** none · **Updated:** 2026-10-28
+- **Matched query:** `forest point cloud segmentation`
+- **Description:** A Promptable Instance Segmentation Model for 3D Forest LiDAR Point Clouds
 
 ## [jl626/MCRC](https://github.com/jl626/MCRC)
 
@@ -144,23 +150,17 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 - **Matched query:** `tree crown segmentation lidar`
 - **Description:** Automatic tree delineation from LiDAR point couds
 
-## [thanhhff/SelectAnyTree](https://github.com/thanhhff/SelectAnyTree)
-
-- **Stars:** 11 · **Language:** unknown · **License:** none · **Updated:** 2026-10-06
-- **Matched query:** `forest point cloud segmentation`
-- **Description:** A Promptable Instance Segmentation Model for 3D Forest LiDAR Point Clouds
-
-## [ruoppa/GrowSP-ForMS](https://github.com/ruoppa/GrowSP-ForMS)
-
-- **Stars:** 11 · **Language:** Python · **License:** MIT · **Updated:** 2026-05-16
-- **Matched query:** `forest point cloud segmentation`
-- **Description:** Official implementation of the ISPRS Journal of Photogrammetry and Remote Sensing paper: "Unsupervised deep learning for semantic segmentation of multispectral LiDAR forest point clouds"
-
 ## [Putaonjfu/WDTS](https://github.com/Putaonjfu/WDTS)
 
-- **Stars:** 9 · **Language:** Python · **License:** MIT · **Updated:** 2026-09-18
+- **Stars:** 10 · **Language:** Python · **License:** MIT · **Updated:** 2026-11-02
 - **Matched query:** `terrestrial laser scanning tree`
 - **Description:** WDTS: Water Droplet Model-Driven Entropy Optimization for Individual Tree Skeletonization from Terrestrial Laser Scanning Point Clouds
+
+## [juliacarr/forest](https://github.com/juliacarr/forest)
+
+- **Stars:** 10 · **Language:** Python · **License:** none · **Updated:** 2024-08-29
+- **Matched query:** `forest point cloud segmentation`
+- **Description:** This is the supplementary code for Carr and Slyder 2017 (submitted to International Journal of Remote Sensing), "Individual tree segmentation from a leaf-off photogrammetric point cloud"
 
 ## [mac999/scan_to_model_pipeline](https://github.com/mac999/scan_to_model_pipeline)
 
@@ -186,17 +186,17 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 - **Matched query:** `terrestrial laser scanning tree`
 - **Description:** Urban trees analyses from terrestrial laser scanning
 
+## [uc-vision/synthetic-trees-II](https://github.com/uc-vision/synthetic-trees-II)
+
+- **Stars:** 8 · **Language:** Python · **License:** GPL-3.0 · **Updated:** 2026-11-04
+- **Matched query:** `tree skeleton point cloud`
+- **Description:** Synthetic tree point cloud dataset with ground truth skeletons.
+
 ## [TobyDJackson/TreeQSM_Architecture](https://github.com/TobyDJackson/TreeQSM_Architecture)
 
 - **Stars:** 7 · **Language:** MATLAB · **License:** none · **Updated:** 2024-06-26
 - **Matched query:** `TLS QSM`
 - **Description:** Functions to extract architectural measures from 3D models of trees based on TLS data
-
-## [uc-vision/synthetic-trees-II](https://github.com/uc-vision/synthetic-trees-II)
-
-- **Stars:** 7 · **Language:** Python · **License:** GPL-3.0 · **Updated:** 2026-08-31
-- **Matched query:** `tree skeleton point cloud`
-- **Description:** Synthetic tree point cloud dataset with ground truth skeletons.
 
 ## [yiliutan/TLNet](https://github.com/yiliutan/TLNet)
 
@@ -210,11 +210,11 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 - **Matched query:** `individual tree detection lidar`
 - **Description:** R scripts for LiDAR point-cloud individual tree detection and crown delineation
 
-## [YuchenGUOGYC/Tree-segmetation-code-offered-by-Hamraz-](https://github.com/YuchenGUOGYC/Tree-segmetation-code-offered-by-Hamraz-)
+## [honkaepp/pointcloudlabeler](https://github.com/honkaepp/pointcloudlabeler)
 
-- **Stars:** 4 · **Language:** Jupyter Notebook · **License:** none · **Updated:** 2023-07-29
+- **Stars:** 4 · **Language:** Rust · **License:** GPL-3.0 · **Updated:** 2026-10-29
 - **Matched query:** `terrestrial laser scanning tree`
-- **Description:** This code to the main processing of  dessertation "Combining LiDAR and Allometric/Volumetric Equations to estimate Above Ground Biomass from an Airborne LiDAR Scanning Model converted by Terrestrial Laser Scanning Point Cloud  "
+- **Description:** Tree segmentation and forest inventory from terrestrial and mobile laser scans
 
 ## [meyerls/CherryPicker](https://github.com/meyerls/CherryPicker)
 
@@ -234,6 +234,12 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 - **Matched query:** `lidar tree structure`
 - **Description:** Tree structure metrics from terrestrial LiDAR point clouds
 
+## [filippogalluzzi27/japan-trees-traits](https://github.com/filippogalluzzi27/japan-trees-traits)
+
+- **Stars:** 2 · **Language:** R · **License:** none · **Updated:** 2026-11-03
+- **Matched query:** `lidar tree structure`
+- **Description:** Repository for the analysis of Japanese monumental trees and their relationship with functional space, structure derived from LiDAR, and climatic gradients.
+
 ## [wischmcj/pyQSM](https://github.com/wischmcj/pyQSM)
 
 - **Stars:** 2 · **Language:** Python · **License:** MPL-2.0 · **Updated:** 2026-07-30
@@ -245,9 +251,3 @@ here straight into the catalog. Before adding any entry to `methods.ts`:
 - **Stars:** 2 · **Language:** Python · **License:** MIT · **Updated:** 2026-09-19
 - **Matched query:** `leaf wood classification point cloud`
 - **Description:** Python implementation of LeWoS: unsupervised leaf-wood classification from TLS point clouds
-
-## [sapto7777/TreeDetection](https://github.com/sapto7777/TreeDetection)
-
-- **Stars:** 2 · **Language:** R · **License:** none · **Updated:** 2023-09-16
-- **Matched query:** `individual tree detection lidar`
-- **Description:** Use of DBSCAN to identify individual trees from a LiDAR point cloud
