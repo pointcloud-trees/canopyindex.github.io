@@ -62,7 +62,9 @@ src/
   routes/                # file-based routes (see src/routes/README.md)
   server.ts              # SSR error-normalization wrapper
 scripts/
-  scan-new-methods.mjs   # weekly GitHub scan for un-cataloged repos
+  scan-new-methods.mjs   # weekly GitHub/arXiv/Crossref scan for un-cataloged methods
+  scan-state.json        # last scan date + candidates already reported
+  ignored-repos.txt      # rejected repos the scan should never suggest again
 .github/workflows/
   ci.yml                 # lint + typecheck + build on push/PR
   scan-new-methods.yml   # runs the scan script, opens a review PR
@@ -71,12 +73,24 @@ scripts/
 ### Automated candidate scanning
 
 `.github/workflows/scan-new-methods.yml` runs weekly (`scripts/scan-new-methods.mjs`)
-against a set of GitHub search queries, filters out anything already in
-`methods.ts`, and opens a PR with a report (`NEW_METHOD_CANDIDATES.md`) for
-human review. It **never** writes into `methods.ts` directly - GitHub search
-results routinely include forks, unrelated repos, and unreliable metadata, so
-every candidate needs the same manual verification described above before it
-becomes a real catalog entry.
+and opens a PR for human review. It:
+
+- searches GitHub for repos **created or pushed since the last scan**, newest first,
+  so new low-star repos aren't drowned out by long-established ones;
+- searches arXiv and Crossref for recent papers, and turns any GitHub link in a
+  paper's abstract into a repo candidate;
+- skips anything already in `methods.ts`, already reported in an earlier scan
+  (`scripts/scan-state.json`), or listed in `scripts/ignored-repos.txt`;
+- appends **draft entries** for the most relevant repos to `methods.ts`, in a block
+  marked `AUTO-DRAFTED`, with `TODO` comments on every guessed field. A paper link
+  is only filled from a DOI or arXiv id that resolves and is on-topic. It is never
+  guessed;
+- writes the full report, including recent papers with no linked code, to
+  `NEW_METHOD_CANDIDATES.md`.
+
+The drafts need the same manual verification described above before merging.
+Delete the ones that don't belong, and add their repo to `scripts/ignored-repos.txt`
+so they aren't suggested again.
 
 ## CI
 

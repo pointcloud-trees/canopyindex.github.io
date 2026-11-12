@@ -1,0 +1,8 @@
+# Repos the weekly scan should never suggest again (one owner/repo per line, case-insensitive).
+# Add a repo here when you reject a candidate, with a short reason after a #.
+
+hargrove-lab/QSAR                     # RNA drug-discovery QSAR models, not trees
+pingyangtiaer/HydroLiDAR              # watershed hydrography; "tree" = K-D tree
+sining1989/PointCloudTools            # generic PCL point-cloud viewer
+mac999/scan_to_model_pipeline         # building/BIM scan-to-mesh pipeline
+pointcloud-trees/canopyindex.github.io   # this site itself

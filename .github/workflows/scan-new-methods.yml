@@ -20,11 +20,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
-      - name: Scan GitHub for candidate methods
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scan GitHub, arXiv and Crossref for candidate methods
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/scan-new-methods.mjs
+
+      # Drafted entries must pass the same checks as CI (PRs opened with
+      # GITHUB_TOKEN don't trigger the CI workflow on their own).
+      - name: Format and typecheck drafted entries
+        run: |
+          npx prettier --write src/lib/methods.ts
+          npx eslint src/lib/methods.ts
+          npx tsc --noEmit
 
       - name: Open PR with candidates
         uses: peter-evans/create-pull-request@v6
@@ -32,21 +44,35 @@ jobs:
           commit-message: "chore: update new-method candidate scan"
           title: "New LiDAR tree-structure method candidates found"
           body: |
-            Automated weekly scan of GitHub for repositories matching LiDAR
-            tree-structure keywords that aren't yet in the catalog
-            (`src/lib/methods.ts`).
+            Automated weekly scan of GitHub, arXiv and Crossref for LiDAR
+            tree-structure methods that aren't yet in the catalog.
 
-            **This data is unverified.** GitHub search results routinely include
-            forks, unrelated repos, and metadata (license, stars, description)
-            that doesn't hold up under a closer look. Before adding any candidate
-            below to `methods.ts`:
+            - **`src/lib/methods.ts`**: draft entries for the most relevant repos,
+              in a block marked `AUTO-DRAFTED`. Guessed fields carry `TODO` comments.
+            - **`NEW_METHOD_CANDIDATES.md`**: the full report, including lower-relevance
+              repos and recent papers with no linked code.
+            - **`scripts/scan-state.json`**: the scan date and the candidates already
+              reported, so next week's scan only shows new ones.
+
+            **The drafts are unverified.** For each one:
 
             - Confirm the repo is real, maintained, and matches its description
             - Check the license in the repo itself, not just the search result
-            - Find the correct paper via Crossref or the repo's README — never guess a DOI
-            - Verify author names against the paper/package metadata — never invent one
+            - Confirm the paper link describes this method (DOIs are only filled when they
+              resolve on Crossref/arXiv, never guessed)
+            - Verify author names against the paper/package metadata
+            - Rewrite the summary, check `properties`/`inputs`/`year`, remove the `TODO` comments
+            - **Delete drafts that don't belong** and add their repo to
+              `scripts/ignored-repos.txt`
+            - Remove the `AUTO-DRAFTED` marker comments
 
-            See `NEW_METHOD_CANDIDATES.md` in this PR for the full candidate list.
+            Push fixes to this branch and merge **before next Monday's scan**: the
+            next run rebuilds this branch from `main` and overwrites unmerged edits.
+            If you close this PR without merging, next week's scan regenerates the
+            same candidates.
           branch: automated/new-method-candidates
-          add-paths: NEW_METHOD_CANDIDATES.md
+          add-paths: |
+            NEW_METHOD_CANDIDATES.md
+            src/lib/methods.ts
+            scripts/scan-state.json
           delete-branch: true
