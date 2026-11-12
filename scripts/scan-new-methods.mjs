@@ -542,10 +542,10 @@ function writeDrafts(catalogContent, drafts, date) {
   if (end === -1) throw new Error("Could not find end of METHODS array in methods.ts");
   const block = [
     `${DRAFT_MARKER} by scripts/scan-new-methods.mjs (scan: ${date}) ----`,
-    "  // Unverified. For each entry: check every field against the repo and paper, fix or",
-    "  // remove the TODO comments, and delete entries that don't belong (add their repo to",
-    "  // scripts/ignored-repos.txt so they're never suggested again). Delete these marker",
-    "  // comments before merging.",
+    "  // These are live catalog entries: merging the PR publishes every entry left here.",
+    "  // Check each field against the repo and paper, fix anything marked TODO, and delete",
+    "  // entries that don't belong (add their repo to scripts/ignored-repos.txt so they're",
+    "  // never suggested again). The comments are harmless if left in.",
     ...drafts,
     "  // ---- END AUTO-DRAFTED ----",
   ].join("\n");

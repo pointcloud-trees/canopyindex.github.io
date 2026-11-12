@@ -88,9 +88,10 @@ and opens a PR for human review. It:
 - writes the full report, including recent papers with no linked code, to
   `NEW_METHOD_CANDIDATES.md`.
 
-The drafts need the same manual verification described above before merging.
-Delete the ones that don't belong, and add their repo to `scripts/ignored-repos.txt`
-so they aren't suggested again.
+The drafts are real entries in the `METHODS` array, so **merging the PR adds them to
+the live catalog** (the merge to `main` triggers the deploy). Before merging, give them
+the manual check described above. Delete the ones that don't belong and add their repo
+to `scripts/ignored-repos.txt` so they aren't suggested again.
 
 ## CI
 

@@ -61,10 +61,13 @@ jobs:
             - Confirm the paper link describes this method (DOIs are only filled when they
               resolve on Crossref/arXiv, never guessed)
             - Verify author names against the paper/package metadata
-            - Rewrite the summary, check `properties`/`inputs`/`year`, remove the `TODO` comments
+            - Rewrite the summary and check `properties`/`inputs`/`year` (marked `TODO`)
             - **Delete drafts that don't belong** and add their repo to
               `scripts/ignored-repos.txt`
-            - Remove the `AUTO-DRAFTED` marker comments
+
+            **Merging adds every remaining draft to the live catalog** (the deploy
+            workflow runs on the merge to `main`). The `AUTO-DRAFTED` and `TODO`
+            comments are only comments, so it's fine to leave them in.
 
             Push fixes to this branch and merge **before next Monday's scan**: the
             next run rebuilds this branch from `main` and overwrites unmerged edits.
