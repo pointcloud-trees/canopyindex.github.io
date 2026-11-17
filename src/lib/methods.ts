@@ -510,4 +510,277 @@ export const METHODS: Method[] = [
     inputs: ["TLS"],
     year: 2019,
   },
+  // ---- AUTO-DRAFTED by scripts/scan-new-methods.mjs (scan: 2026-11-16) ----
+  // These are live catalog entries: merging the PR publishes every entry left here.
+  // Check each field against the repo and paper, fix anything marked TODO, and delete
+  // entries that don't belong (add their repo to scripts/ignored-repos.txt so they're
+  // never suggested again). The comments are harmless if left in.
+  {
+    id: "forpt",
+    name: "ForPT",
+    authors: "Yue et al.", // from paper metadata
+    summary: "[ArXiv 2026] Toward A Foundation Model for Forest Point Clouds", // TODO rewrite: copied from repo description
+    repo: "https://github.com/prs-eth/ForPT",
+    homepage: "https://prs-eth.github.io/ForPT/",
+    paper: "https://arxiv.org/abs/2609.24787", // resolves (paper abstract links to this repo): "Toward a foundation model for forest point clouds"
+    language: "Python",
+    license: "MIT",
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: ["MLS", "ULS", "ALS"], // TODO verify: inferred from keywords
+    year: 2026, // paper year
+  },
+  {
+    id: "pyfor",
+    name: "pyfor",
+    authors: "Bryce Frank", // TODO verify: GitHub owner name, no paper found
+    summary: "Tools for analyzing aerial point clouds of forest data.", // TODO rewrite: copied from repo description
+    repo: "https://github.com/brycefrank/pyfor",
+    language: "Python",
+    license: "MIT",
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2016, // TODO verify: repo creation year
+  },
+  {
+    id: "3d-forest",
+    name: "3d-forest",
+    authors: "Landscape Research Institute - Department of Forest Ecology", // TODO verify: GitHub organization name, no paper found
+    summary:
+      "Visualization, processing and analysis of Lidar point clouds, mainly focused on forest environment. New version of 3D Forest. Process files with terabytes of data. Edit new point attributes. Simple addition of new…", // TODO rewrite: copied from repo description
+    repo: "https://github.com/VUKOZ-OEL/3d-forest",
+    homepage: "https://3dforest.eu",
+    language: "C++",
+    license: "GPL-3.0",
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2020, // TODO verify: repo creation year
+  },
+  {
+    id: "pyforestscan",
+    name: "PyForestScan",
+    authors: "Iosefa Percival", // TODO verify: GitHub owner name, no paper found
+    summary:
+      "A python package for calculating forest structural metrics from airborne point clouds.", // TODO rewrite: copied from repo description
+    repo: "https://github.com/iosefa/PyForestScan",
+    homepage: "https://pyforestscan.sefa.ai/",
+    language: "Python",
+    license: "MIT",
+    properties: [], // TODO verify: inferred from keywords
+    inputs: ["ALS"], // TODO verify: inferred from keywords
+    year: 2023, // TODO verify: repo creation year
+  },
+  {
+    id: "arbor",
+    name: "arbor",
+    authors: "r-lidar", // TODO verify: GitHub organization name, no paper found
+    summary: "3D Forest modelisation in MLS point cloud", // TODO rewrite: copied from repo description
+    repo: "https://github.com/r-lidar/arbor",
+    homepage: "https://r-lidar.github.io/arbor_book/",
+    language: "C++",
+    license: "GPL-3.0",
+    properties: ["qsm-branches-biomass", "tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: ["MLS"], // TODO verify: inferred from keywords
+    year: 2025, // TODO verify: repo creation year
+  },
+  {
+    id: "pointtree",
+    name: "pointtree",
+    authors: "Burmeister et al.", // TODO verify: from a paper that may not be this method's
+    summary: "A Python Package for Tree Instance Segmentation in 3D Point Clouds.", // TODO rewrite: copied from repo description
+    repo: "https://github.com/ai4trees/pointtree",
+    paper: "https://arxiv.org/abs/2509.03633", // TODO verify, may be the wrong paper (first on-topic paper cited in README): "treeX: Unsupervised Tree Instance Segmentation in Dense Forest Point Clouds"
+    language: "Python",
+    license: "MIT",
+    properties: ["stem-diameter", "height-crown", "tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: ["TLS", "MLS", "ULS"], // TODO verify: inferred from keywords
+    year: 2025, // TODO verify: paper year
+  },
+  {
+    id: "segfix",
+    name: "Segfix",
+    authors: "UQ-EORC", // TODO verify: GitHub organization name, no paper found
+    summary: "A GUI tool to fix the instance segmentation of tree point clouds.", // TODO rewrite: copied from repo description
+    repo: "https://github.com/UQ-EORC/Segfix",
+    language: "Python",
+    license: "GPL-3.0",
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2026, // TODO verify: repo creation year
+  },
+  {
+    id: "cspstandsegmentation",
+    name: "CspStandSegmentation",
+    authors: "Larysch et al.", // TODO verify: from a paper that may not be this method's
+    summary: "R package for single tree delination from TLS/MLS/ULS point clouds", // TODO rewrite: copied from repo description
+    repo: "https://github.com/JulFrey/CspStandSegmentation",
+    paper: "https://doi.org/10.1007/s10342-025-01796-z", // TODO verify, may be the wrong paper (first on-topic paper cited in README): "Quantifying and mapping the ready-to-use veneer volume of European beech trees…"
+    language: "R",
+    license: "GPL-3.0",
+    properties: ["stem-diameter", "height-crown", "qsm-branches-biomass"], // TODO verify: inferred from keywords
+    inputs: ["TLS", "MLS", "ULS"], // TODO verify: inferred from keywords
+    year: 2025, // TODO verify: paper year
+  },
+  {
+    id: "cc-treeiso-plugin",
+    name: "cc-treeiso-plugin",
+    authors: "Xi et al.", // from paper metadata
+    summary: "Individual-tree isolation (treeiso) from terrestrial laser scanning", // TODO rewrite: copied from repo description
+    repo: "https://github.com/truebelief/cc-treeiso-plugin",
+    paper: "https://doi.org/10.3390/rs14236116", // resolves (cited in README, title names the repo): "3D Graph-Based Individual-Tree Isolation (Treeiso) from Terrestrial Laser…"
+    language: "C++",
+    license: "GPL-3.0",
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: ["TLS"], // TODO verify: inferred from keywords
+    year: 2022, // paper year
+  },
+  {
+    id: "selectanytree",
+    name: "SelectAnyTree",
+    authors: "Nguyen et al.", // from paper metadata
+    summary: "A Promptable Instance Segmentation Model for 3D Forest LiDAR Point Clouds", // TODO rewrite: copied from repo description
+    repo: "https://github.com/thanhhff/SelectAnyTree",
+    homepage: "https://thanhhff.github.io/SelectAnyTree/",
+    paper: "https://arxiv.org/abs/2606.27491", // resolves (cited in README, title names the repo): "SelectAnyTree: A Promptable Instance Segmentation Model for 3D Forest LiDAR…"
+    language: "Unknown",
+    license: "Unknown", // TODO verify: check LICENSE file in repo
+    properties: ["height-crown", "tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2026, // paper year
+  },
+  {
+    id: "treex",
+    name: "treeX",
+    authors: "Tockner et al.", // TODO verify: from a paper that may not be this method's
+    summary:
+      "Package for individual tree detection and tree segmentation from ground-based LiDAR data", // TODO rewrite: copied from repo description
+    repo: "https://github.com/anditockner/treeX",
+    paper: "https://doi.org/10.1016/j.jag.2022.103025", // TODO verify, may be the wrong paper (first on-topic paper cited in README): "Automatic tree crown segmentation using dense forest point clouds from Personal…"
+    language: "R",
+    license: "GPL-3.0",
+    properties: ["height-crown", "tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: ["TLS"], // TODO verify: inferred from keywords
+    year: 2022, // TODO verify: paper year
+  },
+  {
+    id: "treelite3d",
+    name: "TreeLite3D",
+    authors: "Rizaldy et al.", // TODO verify: from a paper that may not be this method's
+    summary: "3D tree segmentation and classification with minimal labels from LiDAR point clouds", // TODO rewrite: copied from repo description
+    repo: "https://github.com/aldinorizaldy/TreeLite3D",
+    paper: "https://doi.org/10.1016/j.rse.2026.115564", // TODO verify, may be the wrong paper (first on-topic paper cited in README): "Label-efficient 3D forest mapping: Self-supervised and transfer learning for…"
+    language: "Python",
+    license: "MIT",
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2026, // TODO verify: paper year
+  },
+  {
+    id: "wdts",
+    name: "WDTS",
+    authors: "Pu et al.", // TODO verify: from a paper that may not be this method's
+    summary:
+      "WDTS: Water Droplet Model-Driven Entropy Optimization for Individual Tree Skeletonization from Terrestrial Laser Scanning Point Clouds", // TODO rewrite: copied from repo description
+    repo: "https://github.com/Putaonjfu/WDTS",
+    paper: "https://doi.org/10.1016/j.isprsjprs.2026.04.050", // TODO verify, may be the wrong paper (recent paper whose title names the repo): "WDTS: Water droplet model-driven entropy optimization for individual tree…"
+    language: "Python",
+    license: "MIT",
+    properties: ["qsm-branches-biomass", "tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: ["TLS"], // TODO verify: inferred from keywords
+    year: 2026, // TODO verify: paper year
+  },
+  {
+    id: "forestquery",
+    name: "ForestQuery",
+    authors: "Zhan et al.", // from paper metadata
+    summary:
+      "ForestQuery: Boundary-Aware and Spatially Anchored Query Learning for Unified Forest Point Cloud Segmentation", // TODO rewrite: copied from repo description
+    repo: "https://github.com/zhan994/ForestQuery",
+    paper: "https://arxiv.org/abs/2610.03403", // resolves (cited in README, title names the repo): "ForestQuery: Boundary-Aware and Spatially Anchored Query Learning for Unified…"
+    language: "Unknown",
+    license: "Apache-2.0",
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2026, // paper year
+  },
+  {
+    id: "forest3d",
+    name: "forest3d",
+    authors: "David Diaz", // TODO verify: GitHub owner name, no paper found
+    summary:
+      "3D visualization of forest inventory plots and probabilistic approach to co-registering a stem map with lidar data", // TODO rewrite: copied from repo description
+    repo: "https://github.com/d-diaz/forest3d",
+    language: "HTML",
+    license: "BSD-3-Clause",
+    properties: ["stem-diameter", "tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2018, // TODO verify: repo creation year
+  },
+  {
+    id: "canopy-synth-2d3d",
+    name: "canopy-synth-2d3d",
+    authors: "LukSlow", // TODO verify: GitHub owner name, no paper found
+    summary:
+      "A showcase of a procedural Blender + TreeIt pipeline generating synthetic 2D renders and 3D point clouds of trees, with automatic segmentation labels (both semantic and instance) for forestry and urban canopy modeling.", // TODO rewrite: copied from repo description
+    repo: "https://github.com/slowiklukasz/canopy-synth-2d3d",
+    language: "Unknown",
+    license: "Unknown", // TODO verify: check LICENSE file in repo
+    properties: ["height-crown", "tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2026, // TODO verify: repo creation year
+  },
+  {
+    id: "tlnet",
+    name: "TLNet",
+    authors: "Tan et al.", // from paper metadata
+    summary:
+      "TLNet: a deep learning framework for tree detection in forest point clouds using multi-layered forest structure", // TODO rewrite: copied from repo description
+    repo: "https://github.com/yiliutan/TLNet",
+    homepage: "https://doi.org/10.1016/j.isprsjprs.2026.02.002",
+    paper: "https://doi.org/10.1016/j.isprsjprs.2026.02.002", // resolves (cited in README, title names the repo): "TLNet: A deep learning framework for tree detection in forest point clouds…"
+    language: "Python",
+    license: "Unknown", // TODO verify: check LICENSE file in repo
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2026, // paper year
+  },
+  {
+    id: "forest-lidar-instance-segmentation-showcase",
+    name: "forest-lidar-instance-segmentation-showcase",
+    authors: "LukSlow", // TODO verify: GitHub owner name, no paper found
+    summary:
+      "Portfolio showcase: transformer-based semantic + instance segmentation of individual trees from synthetic 3D LiDAR point clouds. Custom DETR/Mask3D-style decoder, geometry-aware attention, forest-specific augmentations.", // TODO rewrite: copied from repo description
+    repo: "https://github.com/slowiklukasz/forest-lidar-instance-segmentation-showcase",
+    language: "Unknown",
+    license: "Unknown", // TODO verify: check LICENSE file in repo
+    properties: ["tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2026, // TODO verify: repo creation year
+  },
+  {
+    id: "canopy-filter",
+    name: "canopy-filter",
+    authors: "UQ-EORC", // TODO verify: GitHub organization name, no paper found
+    summary:
+      "Headless 3D SegFormer point classifier for understory/canopy and wood/leaf separation in forest point clouds", // TODO rewrite: copied from repo description
+    repo: "https://github.com/UQ-EORC/canopy-filter",
+    language: "Python",
+    license: "Unknown", // TODO verify: check LICENSE file in repo
+    properties: ["height-crown", "leaf-wood"], // TODO verify: inferred from keywords
+    inputs: [], // TODO verify: inferred from keywords
+    year: 2026, // TODO verify: repo creation year
+  },
+  {
+    id: "leafwood-segmentation",
+    name: "LeafWood_Segmentation",
+    authors: "Kaharlytskyi et al.", // TODO verify: from a paper that may not be this method's
+    summary: "Leaf wood pointcloud separation algorithm.", // TODO rewrite: copied from repo description
+    repo: "https://github.com/heejumun/LeafWood_Segmentation",
+    paper: "https://arxiv.org/abs/2609.21903", // TODO verify, may be the wrong paper (recent paper whose title names the repo): "The Role of Radiometric Features in Cross-Site Leaf-Wood Segmentation of LiDAR…"
+    language: "Python",
+    license: "Unknown", // TODO verify: check LICENSE file in repo
+    properties: ["stem-diameter", "qsm-branches-biomass", "leaf-wood", "tree-stem-detection"], // TODO verify: inferred from keywords
+    inputs: ["TLS"], // TODO verify: inferred from keywords
+    year: 2026, // TODO verify: paper year
+  },
+  // ---- END AUTO-DRAFTED ----
 ];
